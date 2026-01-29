@@ -57,3 +57,6 @@ model = Pipeline(
 model.fit(X,y)
 
 os.makedirs("model", exist_ok=True)
+joblib.dump(model, "model/wound_risk.pkl")
+
+print("✅ Model trained and saved to model/wound_risk.pkl")
