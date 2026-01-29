@@ -14,20 +14,25 @@ def root():
             "status": "ok"
             }
 
-@app.get("/users")
-def get_users():
-    return [{"id": 1, "name": "Limuel"}]
-
 @app.post("/assess", response_model=WoundAssessmentResponse)
 def assess_wound(data: WoundAssessmentRequest):
+
+    #test data
     risk_level = "LOW"
     doctor_visit = False
-
     first_aid = [
         "Clean the wound with clean running water",
         "Cover with a sterile dressing"
     ]
-    print(data)
+
+    
+    print({
+        "risk_level": risk_level,
+        "doctor_visit": doctor_visit,
+        "first_aid": first_aid,
+        "note": "This tool provides first-aid suggestions only and is not a medical diagnosis."
+    })
+    
     return {
         "risk_level": risk_level,
         "doctor_visit": doctor_visit,
