@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.schemas import (WoundAssessmentRequest, WoundAssessmentResponse)
 
+
 app = FastAPI(
     title="AI Wound First-Aid Advisor",
     description="An AI-assisted wound first-aid advisor and suggestion tool",
@@ -22,6 +23,7 @@ def assess_wound(data: WoundAssessmentRequest):
     doctor_visit = True
     first_aid = [
         "Clean the wound with clean running water",
+        "Apply gentle pressure if bleeding",
         "Cover with a sterile dressing"
     ]
 
