@@ -18,8 +18,8 @@ def root():
 def assess_wound(data: WoundAssessmentRequest):
 
     #test data
-    risk_level = "LOW"
-    doctor_visit = False
+    risk_level = "HIGH"
+    doctor_visit = True
     first_aid = [
         "Clean the wound with clean running water",
         "Cover with a sterile dressing"
