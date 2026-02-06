@@ -9,6 +9,8 @@ app = FastAPI(
     version="0.1.0"
 )
 
+model = joblib.load("model/wound_risk.pkl")
+
 @app.get("/health")
 def root():
     return {
