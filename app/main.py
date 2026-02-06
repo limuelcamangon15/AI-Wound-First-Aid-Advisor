@@ -1,6 +1,7 @@
 from fastapi import FastAPI
 from app.schemas import (WoundAssessmentRequest, WoundAssessmentResponse)
-
+import joblib
+from app.rules import WoundAssessmentRequest
 
 app = FastAPI(
     title="AI Wound First-Aid Advisor",
